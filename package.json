@@ -1,4 +1,6 @@
 {
+  "name": "@eonasdan/editorjs-code",
+  "version": 3.0.0",
   "name": "@editorjs/code",
   "version": "3.0.0",
   "keywords": [
@@ -6,19 +8,19 @@
     "code",
     "tool",
     "editor.js",
-    "editorjs"
+    "editorjs",
+    "prism"
   ],
-  "description": "Code Tool for Editor.js",
+  "description": "Code Tool for Editor.js with prism support",
   "license": "MIT",
-  "repository": "https://github.com/editor-js/code",
+  "repository": "https://github.com/Eonasdan/editor-js-code",
   "main": "./dist/bundle.js",
   "scripts": {
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development --watch"
   },
   "author": {
-    "name": "CodeX",
-    "email": "team@codex.so"
+    "name": "Jonathan Peterson"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",

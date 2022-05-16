@@ -4,6 +4,10 @@
 
 Code Tool for the [Editor.js](https://ifmo.su/editor) allows to include code examples in your articles.
 
+This fork is made to work with Prism Highlight.
+
+You can configure what languages are available through `config.languageList` or supplement the default list with `config.additionalLanguages` 
+
 ![](https://capella.pics/8df022f5-b4d5-4d30-a527-2a0efb63f291.jpg)
 
 ## Installation
@@ -13,7 +17,7 @@ Code Tool for the [Editor.js](https://ifmo.su/editor) allows to include code exa
 Get the package
 
 ```shell
-npm i --save-dev @editorjs/code
+npm i --save-dev@eonasdan/editorjs-code
 ```
 
 Include module at your application
@@ -29,9 +33,9 @@ const CodeTool = require('@editorjs/code');
 
 ### Load from CDN
 
-You can load specific version of package from [jsDelivr CDN](https://www.jsdelivr.com/package/npm/@editorjs/code).
+You can load specific version of package from [jsDelivr CDN](https://www.jsdelivr.com/package/npm/@eonasdan/editorjs-code).
 
-`https://cdn.jsdelivr.net/npm/@editorjs/code@2.0.0`
+`https://cdn.jsdelivr.net/npm/@eonasdan/editorjs-code`
 
 Require this script on a page with Editor.js.
 
@@ -71,6 +75,7 @@ This Tool returns code.
     "type" : "code",
     "data" : {
         "code": "body {\n font-size: 14px;\n line-height: 16px;\n}",
+        "language-code": "language-javascript"
     }
 }
 ```
