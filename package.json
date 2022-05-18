@@ -1,6 +1,6 @@
 {
   "name": "@eonasdan/editorjs-code",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "keywords": [
     "codex editor",
     "code",
@@ -12,7 +12,10 @@
   "description": "Code Tool for Editor.js with prism support",
   "license": "MIT",
   "repository": "https://github.com/Eonasdan/editorjs-code",
-  "main": "./dist/bundle.js",
+  "main": "dist/bundle.js",
+  "files": [
+    "dist/bundle.js"
+  ],
   "scripts": {
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development --watch"
