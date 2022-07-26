@@ -20,6 +20,7 @@ import './index.css';
  */
 export default class CodeTool {
 
+  // noinspection JSUnusedGlobalSymbols
   /**
    * Notify core that read-only mode is supported
    *
@@ -29,6 +30,7 @@ export default class CodeTool {
     return true;
   }
 
+  // noinspection JSUnusedGlobalSymbols
   /**
    * Allow to press Enter inside the CodeTool textarea
    *
@@ -42,6 +44,7 @@ export default class CodeTool {
   /**
    * @typedef {object} CodeData — plugin saved data
    * @property {string} code - previously saved plugin code
+   * @property {string} languageCode - previously saved plugin code
    */
 
   /**
@@ -109,7 +112,7 @@ export default class CodeTool {
 
     this.data = {
       code: data.code || '',
-      languageCode: data.languageCode || ''
+      languageCode: data.languageCode?.replace('language-', '') || ''
     };
 
     this.nodes.holder = this.drawView();
@@ -175,6 +178,7 @@ export default class CodeTool {
     return this.nodes.holder;
   }
 
+  // noinspection JSUnusedGlobalSymbols
   /**
    * Extract Tool's data from the view
    *
@@ -189,6 +193,7 @@ export default class CodeTool {
     };
   }
 
+  // noinspection JSUnusedGlobalSymbols
   /**
    * onPaste callback fired from Editor`s core
    *
@@ -228,6 +233,7 @@ export default class CodeTool {
     }
   }
 
+  // noinspection JSUnusedGlobalSymbols
   /**
    * Get Tool toolbox settings
    * icon - Tool icon's SVG
@@ -252,6 +258,7 @@ export default class CodeTool {
     return 'Enter a code';
   }
 
+  // noinspection JSUnusedGlobalSymbols
   /**
    *  Used by Editor.js paste handling API.
    *  Provides configuration to handle CODE tag.
@@ -265,6 +272,7 @@ export default class CodeTool {
     };
   }
 
+  // noinspection JSUnusedGlobalSymbols
   /**
    * Automatic sanitize config
    *

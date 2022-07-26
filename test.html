@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+    <script src="dist/bundle.js"></script>
+</head>
+<body>
+<div id="editorjs">
+
+</div>
+<script type="module">
+    //import CodeTool from './src/index.js'
+
+
+    new EditorJS({
+        holder: 'editorjs',
+        tools: {
+            code: {
+                class: CodeTool,
+                config: {
+                    languageList: [
+                        {name: 'C#', code: 'csharp'},
+                        {name: 'TypeScript', code: 'typescript'},
+                        {name: 'JavaScript', code: 'js'},
+                        {name: 'HTML', code: 'html'},
+                        {name: 'CSS', code: 'css'},
+                        {name: 'ASP.NET (C#)', code: 'aspnet'},
+                        {name: 'Docker', code: 'docker'},
+                        {name: 'Git', code: 'git'},
+                        {name: 'JSON', code: 'json'},
+                        {name: 'PowerShell', code: 'powershell'},
+                        {name: 'Regex', code: 'regex'},
+                        {name: 'Sass (Scss)', code: 'scss'},
+                        {name: 'YAML', code: 'yaml'},
+                        {name: 'Bicep', code: 'bicep'},
+                        {name: 'SQL', code: 'sql'},
+                        {name: 'Shell', code: 'bash'},
+                    ],
+                    additionalLanguages: [
+                        {name: 'Regex', code: 'regex'},
+                        {name: 'Sass (Scss)', code: 'scss'},
+                        {name: 'YAML', code: 'yaml'},
+                        {name: 'Bicep', code: 'bicep'},
+                        {name: 'SQL', code: 'sql'},
+                        {name: 'Shell', code: 'bash'},
+                    ]
+                }
+            }
+        },
+        data: {
+            "time": 1658867957236,
+            "blocks": [{
+                "id": "1dgH58JZeq",
+                "type": "code",
+                "data": {
+                    "code": "resource appServicePlan_resource 'Microsoft.Web/serverfarms@2021-03-01' = {\n  name: appServicePlanName\n  location: location\n  sku: {\n    name: 'F1'\n  }\n  properties: {\n    reserved: true\n  }\n  kind: 'linux'\n}\n\nresource appService_resource 'Microsoft.Web/sites@2021-03-01' = {\n  name: webSiteName\n  location: location\n  properties: {\n    serverFarmId: appServicePlan_resource.id\n    siteConfig: {\n      linuxFxVersion: 'DOTNETCORE|6.0'\n    }\n  }\n  identity: {\n    type:'SystemAssigned'\n  }\n}",
+                    "languageCode": "language-bicep"
+                }
+            }
+            ]
+        }
+    })
+    ;
+</script>
+</body>
+</html>
