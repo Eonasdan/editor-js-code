@@ -49,22 +49,67 @@ Add a new Tool to the `tools` property of the Editor.js initial config.
 
 ```javascript
 var editor = EditorJS({
-  ...
-  
+  //...
   tools: {
-    ...
+    //...
     code: CodeTool,
   }
-  
-  ...
+  // ...
 });
 ```
 
 ## Config Params
 
-| Field       | Type     | Description                    |
-| ----------- | -------- | -------------------------------|
-| placeholder | `string` | Code Tool's placeholder string |
+| Field         | Type                               | Description              |
+|---------------|------------------------------------|--------------------------|
+| placeholder   | `string`                           | Code Tool's placeholder string |
+| languageList  | `{ name: string, code: string }[]` | Replace the default list |
+| additionalLanguages | `{ name: string, code: string }[]` | Add additional languages |
+
+### Default Languages
+
+| Display Name | Code |
+|--------------|------|
+| HTML | html |
+| CSS | css |
+| JavaScript | js |
+| C# | csharp |
+| ASP.NET (C#) | aspnet |
+| Docker | docker |
+| Git | git |
+| Java | java |
+| JSON | json |
+| JSONP | jsonp |
+| JSON5 | json5 |
+| PowerShell | powershell |
+| Python | python |
+| React JSX | jsx |
+| React TSX | tsx |
+| Regex | regex |
+| Sass (Sass) | sass |
+| Sass (Scss) | scss |
+| SQL | sql |
+| TypeScript | typescript |
+| YAML | yaml |
+
+### Adding additional languages
+
+```javascript
+var editor = EditorJS({
+    //...
+    tools: {
+        code: {
+            class: CodeTool,
+                config: {
+                additionalLanguages: [
+                    { name: 'Bicep', code: 'bicep' },
+                ]
+            }
+        }
+    }
+    //...
+});
+```
 
 ## Output data
 
